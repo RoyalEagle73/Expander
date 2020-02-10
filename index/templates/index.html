@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if request.method == 'GET' %}
+
+<form method="post" >
+    {% csrf_token %}
+    {{ new_form.name }}
+    <button type="submit" name="submit">Submit</button>
+</form>
+{% endif %}
+
+{% if request.method == 'POST' %}
+
+ {{ data }}
+{% endif %}
+
+
+
+
+</body>
+</html>
